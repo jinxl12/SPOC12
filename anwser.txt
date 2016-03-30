@@ -1,4 +1,4 @@
-²é¿´kern/process/proc.hÖĞ¿ÉÒÔ¿´µ½proc_structµÄÄÚÈİ£º
+æŸ¥çœ‹kern/process/proc.hä¸­å¯ä»¥çœ‹åˆ°proc_structçš„å†…å®¹ï¼š
 
 struct proc_struct {
     enum proc_state state;                      // Process state
@@ -16,4 +16,6 @@ struct proc_struct {
     list_entry_t list_link;                     // Process link list 
     list_entry_t hash_link;                     // Process hash list
 };
-°üº¬ÁËµ±Ç°½ø³Ì×´Ì¬£¬½ø³ÌID£¬ÄÚºË¶ÑÕ»£¬ÄÚ´æ¹ÜÀíµÄÊı¾İ½á¹¹µÈµÈ¡£ Í¨¹ıhashÁĞ±í½øĞĞ·Ö×é£¬Ã¿×éÀïÃæ°´ÕÕË«ÏòÁĞ±í½øĞĞ×éÖ¯¡£ proc.cÏÂµÄº¯Êı»ù±¾ÉÏ¶¼ÓÃµ½ÁËËü£¬±ÈÈçproc_run,proc_init,find_procµÈº¯Êı¡£ setup_kstack,copy_thread,do_forkĞèÒªĞŞ¸ÄËü¡£ ÒòÎªÎªÁË´´½¨½ø³Ì£¬ÇĞ»»½ø³Ì£¬ÍË³ö½ø³ÌÊ±ĞèÒªĞŞ¸ÄÁ´±í½á¹¹ºÍÁ´±íÄÚµÄÄÚÈİ ¡£
+åŒ…å«äº†å½“å‰è¿›ç¨‹çŠ¶æ€ï¼Œè¿›ç¨‹IDï¼Œå†…æ ¸å †æ ˆï¼Œå†…å­˜ç®¡ç†çš„æ•°æ®ç»“æ„ç­‰ç­‰ã€‚ é€šè¿‡hashåˆ—è¡¨è¿›è¡Œåˆ†ç»„ï¼Œæ¯ç»„é‡Œé¢æŒ‰ç…§åŒå‘åˆ—è¡¨è¿›è¡Œç»„ç»‡ã€‚ proc.cä¸‹çš„å‡½æ•°åŸºæœ¬ä¸Š
+éƒ½ç”¨åˆ°äº†å®ƒï¼Œæ¯”å¦‚proc_run,proc_init,find_procç­‰å‡½æ•°ã€‚ setup_kstack,copy_thread,do_forkéœ€è¦ä¿®æ”¹å®ƒã€‚ å› ä¸ºä¸ºäº†åˆ›å»ºè¿›ç¨‹ï¼Œåˆ‡æ¢è¿›ç¨‹ï¼Œé€€å‡ºè¿›ç¨‹æ—¶
+éœ€è¦ä¿®æ”¹é“¾è¡¨ç»“æ„å’Œé“¾è¡¨å†…çš„å†…å®¹ ã€‚
